@@ -105,7 +105,7 @@ void drawMap() {
     }
     setColor(7);
     gotoXY(0, HEIGHT);
-    printf("Score: %d  Lives: %d  %s\n", score, lives, powerMode ? "POWER!" : "");
+    printf("Pontos: %d  Vidas: %d  %s\n", score, lives, powerMode ? "POWER!" : "");
 }
 
 // Movimentação segura
@@ -192,7 +192,7 @@ void checkCollisions() {
                 if (lives <= 0) {
                     clearScreen();
                     gotoXY(0, 0);
-                    printf("GAME OVER! Score: %d\n", score);
+                    printf("VOCÊ PERDEU! Score: %d\n", score);
                     system("pause");
                     exit(0);
                 }
@@ -202,7 +202,7 @@ void checkCollisions() {
     if (pelletsLeft <= 0) {
         clearScreen();
         gotoXY(0, 0);
-        printf("YOU WIN! Score: %d\n", score);
+        printf("VOCÊ VENCEU Score: %d\n", score);
         system("pause");
         exit(0);
     }
